@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    animation: morph 2s infinite;
+    margin: 0 auto;
+}
+
+@keyframes morph {
+    0%, 100% {
+        background-color: #00D26A; 
+        border-radius: 50%; 
+        transform: scale(1);
+        clip-path: none; 
+    }
+    33% {
+        background-color: #00A6ED; 
+        border-radius: 0; 
+        transform: scale(1.2);
+        clip-path: none; 
+    }
+    66% {
+        background-color: #F8312F; 
+        border-radius: 0; 
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+        transform: scale(0.8); 
+    }
+}
